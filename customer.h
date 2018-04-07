@@ -1,7 +1,6 @@
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
-#include "global.h"
 #include "log.h"
 #include <functional>
 
@@ -16,13 +15,15 @@ public:
   int getId();
 
 private:
+
+  int id;
+  int shave_time;
   bool quit = false;
   std::condition_variable cv;
   std::mutex mutex;
-  int id;
-  void waitToBeShaved();
   std::thread *thread;
-  int shave_time;
+
+  void waitToBeShaved();
 };
 
 #endif // CUSTOMER_H

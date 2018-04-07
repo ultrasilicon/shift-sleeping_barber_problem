@@ -31,7 +31,5 @@ void Customer::waitToBeShaved()
   cv.wait(lk);
 
   if(!quit)
-    {
       std::this_thread::sleep_for(std::chrono::seconds(shave_time));
-    }
 }

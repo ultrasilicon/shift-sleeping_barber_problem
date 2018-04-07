@@ -3,7 +3,6 @@
 
 #include <list>
 #include "customer.h"
-#include "global.h"
 
 class BarberShop
 {
